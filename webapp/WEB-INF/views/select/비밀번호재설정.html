@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -573,128 +575,113 @@
             			<div class="form-tab">
 	            			<ul class="nav nav-pills nav-fill" role="tablist">
 							    <li class="nav-item">
-							        <a class="nav-link active" id="signin-tab-2" data-toggle="tab" href="#signin-2" role="tab" aria-controls="signin-2" aria-selected="false">Find ID</a>
+							        <a class="nav-link" id="signin-tab-2" data-toggle="tab" href="#signin-2" role="tab" aria-controls="signin-2" aria-selected="false">Find ID</a>
 							    </li>
 							    <li class="nav-item">
-							        <a class="nav-link" id="register-tab-2" data-toggle="tab" href="#register-2" role="tab" aria-controls="register-2" aria-selected="true">Find PWD</a>
+							        <a class="nav-link active" id="register-tab-2" data-toggle="tab" href="#register-2" role="tab" aria-controls="register-2" aria-selected="true">Find PWD</a>
 							    </li>
 							</ul>
 							<div class="tab-content">
-							    <div class="tab-pane fade show active" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
+							    <div class="tab-pane fade" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
 							    	<form action="#">
 
                                         <div class="col-md-12">
-                                            <div class="accordion" id="accordion-1">
-                                                
-                                                <div class="card">
-                                                    <div class="card-header" id="heading-1">
-                                                        <h2 class="card-title">
-                                                            <a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
-                                                                휴대폰번호로 찾기
-                                                            </a>
-                                                        </h2>
-                                                    </div><!-- End .card-header -->
-                                                    <div id="collapse-1" class="collapse show" aria-labelledby="heading-1" data-parent="#accordion-1">
-                                                        <form action="#">
-                                                            <div class="card-body">
-                                                                <input type="text" class="form-control" placeholder="이름입력(2자 이상)" maxlength="10" minlength="2">
-                                                                <input type="text" class="form-control" placeholder="' - '포함 13자(ex.010-1234-5678)" maxlength="13" minlength="13">
-                                                                <button type="submit" class="btn btn-outline-primary-2" style="float: right; margin-bottom: 20px;">찾 기</button>
-                                                            </div><!-- End .card-body -->
-                                                        </form>
-                                                    </div><!-- End .collapse -->
-                                                </div><!-- End .card -->
-                                                
-                                                <div class="card">
-                                                    <div class="card-header" id="heading-2">
-                                                        <h2 class="card-title">
-                                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
-                                                                이메일로 찾기
-                                                            </a>
-                                                        </h2>
-                                                    </div><!-- End .card-header -->
-                                                    <div id="collapse-2" class="collapse" aria-labelledby="heading-2" data-parent="#accordion-1">
-                                                        <div class="card-body">
-                                                            <form action="#">
-                                                                <input type="text" class="form-control" placeholder="이름입력(2자 이상)" max="10" min="2">
-                                                                <input type="email" class="form-control" placeholder="email(ex.so1omon@so1o.com)" min="10">
-                                                                <button type="submit" class="btn btn-outline-primary-2" style="float: right; margin-bottom: 20px;">찾 기</button>
-                                                            </form>
-                                                        </div><!-- End .card-body -->
-                                                    </div><!-- End .collapse -->
-                                                </div><!-- End .card -->
-                
-                                                <div class="card">
-                                                    <div class="card-header" id="heading-3">
-                                                        <h2 class="card-title">
-                                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
-                                                                휴대폰 인증으로 찾기
-                                                            </a>
-                                                        </h2>
-                                                    </div><!-- End .card-header -->
-                                                    <div id="collapse-3" class="collapse" aria-labelledby="heading-3" data-parent="#accordion-1">
-                                                        <div class="card-body">
-                                                            
-                                                        </div><!-- End .card-body -->
-                                                    </div><!-- End .collapse -->
-                                                </div><!-- End .card -->
+                                            <div class="text-center">
+                                                <h5><strong>홍길동</strong>님의 정보와 일치하는  아이디 입니다.</h5>
+                                                <strong>abcd512</strong>
+                                                <p>2023.10.09 가입</p>
+                                            </div>
+                                        </div><!-- End .col-md-12 -->
 
-                                                <div class="card">
-                                                    <div class="card-header" id="heading-4">
-                                                        <h2 class="card-title">
-                                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
-                                                                아이핀 인증으로 찾기
-                                                            </a>
-                                                        </h2>
-                                                    </div><!-- End .card-header -->
-                                                    <div id="collapse-4" class="collapse" aria-labelledby="heading-4" data-parent="#accordion-1">
-                                                        <div class="card-body">
-                                                            
-                                                        </div><!-- End .card-body -->
-                                                    </div><!-- End .collapse -->
-                                                </div><!-- End .card -->
-                                                
-                                            </div><!-- End .accordion -->
-                                        </div><!-- End .col-md-6 -->
+                                        <hr>
+
+                                        <div class="row">
+								    		<div class="col-sm-6 text-center">
+								    			<a href="#" class="btn btn-primary">
+								    				로그인하러 가기
+								    			</a>
+								    		</div><!-- End .col-6 -->
+								    		<div class="col-sm-6 text-center">
+								    			<a href="#" class="btn btn-primary">
+								    				비밀번호 재설정
+								    			</a>
+								    		</div><!-- End .col-6 -->
+                                            
+								    	</div><!-- End .row -->
 
 							    	</form>
 
 							    </div><!-- .End .tab-pane -->
-							    <div class="tab-pane fade" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
-							    	<form action="#">
+							    <div class="tab-pane fade show active" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
+                                    <form action="#">
+                                        <div style="padding: 20px;">
+                                            <h5><strong>비밀번호 변경</strong></h5>
+                                            <input type="password" id="newPwd" class="col-12" placeholder="8~20자, 대문자/특문 각 2개 이상 포함" minlength="8" maxlength="20">
+                                            <label id="validPwdText" style="display: none;"><strong id="validPwdText-2"></strong></label>
+                                            <br><br>
+                                            <h5><strong>비밀번호 확인</strong></h5>
+                                            <input type="password" id="pwdCheck" class="col-12" placeholder="" minlength="8" maxlength="20">
+                                            <label id="pwdCheckText" style="display: none;"><strong id="pwdCheckText-2"></strong></label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 text-right" style="padding-right: 30px;">
+                                                <button type="submit" class="btn btn-primary" id="resetPwdBtn" disabled>비밀번호 재설정</button>
+                                            </div><!-- End .col-6 -->
+                                        </div><!-- End .row -->
+                                    
+                                        <script>
 
-                                        <div class="col-md-12">
-                                            <ul class="nav nav-tabs nav-tabs-bg" id="tabs-1" role="tablist">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" id="tab-1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">휴대폰번호로 찾기</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="tab-2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">이메일로 찾기</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="tab-3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">휴대폰 인증으로 찾기</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="tab-4-tab" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">아이핀 인증으로 찾기</a>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content tab-content-border" id="tab-content-1">
-                                                <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1-tab">
-                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. </p>
-                                                </div><!-- .End .tab-pane -->
-                                                <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2-tab">
-                                                    <p>Nobis perspiciatis natus cum, sint dolore earum rerum tempora aspernatur numquam velit tempore omnis, delectus repellat facere voluptatibus nemo non fugiat consequatur repellendus! Enim, commodi, veniam ipsa voluptates quis amet.</p>
-                                                </div><!-- .End .tab-pane -->
-                                                <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3-tab">
-                                                    <p>Perspiciatis quis nobis, adipisci quae aspernatur, nulla suscipit eum. Dolorum, earum. Consectetur pariatur repellat distinctio atque alias excepturi aspernatur nisi accusamus sed molestias ipsa numquam eius, iusto, aliquid, quis aut.</p>
-                                                </div><!-- .End .tab-pane -->
-                                                <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4-tab">
-                                                    <p>Quis nobis, adipisci quae aspernatur, nulla suscipit eum. Dolorum, earum. Consectetur pariatur repellat distinctio atque alias excepturi aspernatur nisi accusamus sed molestias ipsa numquam eius, iusto, aliquid, quis aut.</p>
-                                                </div><!-- .End .tab-pane -->
-                                            </div><!-- End .tab-content -->
-                                        </div><!-- End. col-md-12 -->
+                                            $(function() {
+                                                function updateButtonState() {
+                                                    var isValidPassword = $("#validPwdText-2").text() === "비밀번호 사용가능";
+                                                    var isPasswordMatching = $("#pwdCheckText-2").text() === "비밀번호 일치";
 
-							    	</form>
+                                                    if (isValidPassword && isPasswordMatching) {
+                                                        $("#resetPwdBtn").prop("disabled", false);
+                                                    } else {
+                                                        $("#resetPwdBtn").prop("disabled", true);
+                                                    }
+                                                }
+
+                                                $("#newPwd").keyup(function() {
+                                                    var password = $("#newPwd").val();
+
+                                                    var specialCharPattern = /[^a-zA-Z0-9]/g;
+                                                    var uppercasePattern = /[A-Z]/g;
+
+                                                    if (password.length >= 8 && password.length <= 20 
+                                                        && (password.match(specialCharPattern) || []).length >= 2 
+                                                        && (password.match(uppercasePattern) || []).length >= 2) {
+                                                        $("#validPwdText").show();
+                                                        $("#validPwdText-2").text("비밀번호 사용가능");
+                                                        $("#validPwdText-2").css("color", "green");
+                                                    } else {
+                                                        $("#validPwdText").show();
+                                                        $("#validPwdText-2").css("color", "red");
+                                                        $("#validPwdText-2").text("비밀번호 사용불가");
+                                                    }
+                                                    updateButtonState();
+                                                });
+
+                                                $("#pwdCheck").keyup(function() {
+                                                    if ($("#newPwd").val() === $("#pwdCheck").val() && $("#pwdCheck").val().length >= 8) {
+                                                        $("#pwdCheckText").css("color", "green");
+                                                        $("#pwdCheckText-2").text("비밀번호 일치");
+                                                        $("#pwdCheckText").show();
+                                                    } else if ($("#pwdCheck").val().length >= 8) {
+                                                        $("#pwdCheckText").css("color", "red");
+                                                        $("#pwdCheckText-2").text("비밀번호 불일치");
+                                                        $("#pwdCheckText").show();
+                                                    } else {
+                                                        $("#pwdCheckText-2").text("");
+                                                    }
+                                                    updateButtonState();
+                                                });
+                                            });
+
+
+                                        </script>
+                                    </form>
 							    </div><!-- .End .tab-pane -->
 							</div><!-- End .tab-content -->
 						</div><!-- End .form-tab -->
@@ -702,6 +689,8 @@
             	</div><!-- End .container -->
             </div><!-- End .login-page section-bg -->
         </main><!-- End .main -->
+
+
 
         <footer class="footer">
         	<div class="footer-middle">
