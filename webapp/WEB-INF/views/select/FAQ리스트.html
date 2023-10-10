@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 부트스트랩에서 제공하고 있는 스타일 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 부트스트랩에서 제공하고 있는 스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        .innerOuter{
+            width: 1080px;
+            margin: auto; 
+        }
+
+        #boardList {
+            text-align: center;
+        }
+        
+        #boardList>tbody>tr:hover {
+            cursor: pointer;
+        }
+        
+        #pagingArea {
+            width: fit-content;
+            margin: auto;
+        }
+        
+        #searchForm {
+            width: 80%;
+            margin: auto;
+            display: flex;
+        }
+        
+
+        /* 검색 폼 반응형 스타일 */
+        @media (max-width: 768px) {
+            #searchForm {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .select {
+                width: 1 00%;
+            }
+
+            .text {
+                width: 100%;
+            }
+
+            .searchBtn {
+                width: 100%;
+            }
+        }
+
+        
+        .CFaqTableItem__list {
+            display: flex;
+            box-sizing: border-box;
+            height: 70px;
+            cursor: pointer;
+            align-items: center
+        }
+
+        .CFaqTableItem__category{
+            width: 160px;
+            font-size: 14px;
+            text-align: center
+        }
+
+        .CFaqTableItem__question {
+            padding: 0 10px;
+            font-size: 14px;
+            flex: 1;
+            margin-top: 15px;
+        }
+
+
+        .CFaqTableItem {
+            width: 100%;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .CFaqTableItem__contents {
+            padding: 24px 10px;
+            font-size: 14px;
+            color: #6e6e6e
+        }
+
+        .CFaqTableItem__contents-box {
+            display: flex;
+            overflow: hidden;
+            height: 0;
+            background-color: #f5f5f5
+        }
+
+        .CFaqTableItem--active .CFaqTableItem__contents-box {
+            height: auto;
+        }
+
+        .CFaqTableItem__contents img {
+            max-width: 100%
+        }
+
+        .CFaqTableItem__answer {
+            display: flex;
+            width: 160px;
+            font-size: 14px;
+            color: #6e6e6e;
+            align-items: center;
+            justify-content: center;
+        }
+        .CFaqTableItem__list button{
+            border: 1px solid rosybrown;
+            background-color: rgba(250, 235, 215, 0);
+            color: rosybrown;
+        }
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <!-- 이쪽에 헤더바 포함할꺼임 -->
+    <jsp:include page=""/>
+
+    <div class="content">
+        <br><br>
+
+        <div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+            <div class="container">
+                <h1 class="page-title">FAQ<span>Community</span></h1>
+            </div><!-- End .container -->
+        </div><!-- End .page-header -->
+
+        <div class="innerOuter" style="padding:5% 10%;">
+	            <!-- 로그인후 상태일 경우만 보여지는 글쓰기 버튼-->
+                <a class="btn btn-outline-primary-2 " style="float:right;" href="enrollForm.bo">글쓰기</a>
+            <br></br>
+
+            <div id="faqMain">
+                <div class="CFaqTableItem">
+                    <div class="CFaqTableItem__list">
+                        <em class="CFaqTableItem__category">로그인/정보</em>
+                        <p class="CFaqTableItem__question">아이디와 비밀번호가 기억나지 않아요.</p>
+                        <button>수정</button>
+                        <button>삭제</button>
+                        <img class="arrow down" src="./assets/images/up.png" alt="">
+                        <img class="arrow up hidden" src="./assets/images/down.png">
+
+                    </div>
+                    <div class="CFaqTableItem__contents-box">
+                        <em class="CFaqTableItem__answer">답변</em>
+                        <div class="CFaqTableItem__contents">
+                            <p>로그인 화면에서 &nbsp;아이디 찾기/비밀번호 찾기를 통해 확인 가능합니다.<br>
+                            아이디 찾기는 아래 3가지 방법 중 하나로 진행해 주세요.<br>
+                            <br>
+                            ■ 휴대전화<br>
+                            회원 정보에 등록된 본인의 휴대전화 번호를 인증하는 방법입니다.<br>
+                            <br>
+                            ■ 이메일<br>
+                            회원 정보에 등록된 본인의 이메일 주소를 인증하는 방법입니다.<br>
+                            <br>
+                            ■ 본인인증<br>
+                            이용 중인 통신사와 휴대전화 번호를 인증하는 방법입니다.<br>
+                            <br>
+                            ※ 비밀번호 재설정을 완료한 휴면 회원은 휴면 해제 및 탈퇴 신청이 취소됩니다.<br>
+                            ※ 비밀번호 찾기는 휴대전화 본인 인증으로만 가능합니다.<br>
+                            <br>
+                            <span style="color:#3498db;"><strong><a href="https://www.musinsa.com/app/cs/faq?idx=59">[아이디/비밀번호 수정 FAQ 바로 가기]</a><br>
+                            <a href="https://www.musinsa.com/app/cs/faq?idx=58">[회원정보 수정 FAQ 바로 가기]</a></strong></span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+            </div>
+
+
+            <br>
+		
+			
+            <div id="pagingArea">
+                <ul class="pagination">
+                	
+	                    <li class="page-item disabled"><a class="page-link" href="">이전</a></li>
+                    	<li class="page-item"><a class="page-link" href="">1</a></li>
+                    	<li class="page-item"><a class="page-link" href="">2</a></li>
+                    	<li class="page-item"><a class="page-link" href="">3</a></li>
+                    	<li class="page-item"><a class="page-link" href="">4</a></li>
+                    	<li class="page-item"><a class="page-link" href="">5</a></li>
+	                    <li class="page-item"><a class="page-link" href="">다음</a></li>
+                </ul>
+            </div>
+            
+            
+            <br clear="both"><br>
+            
+            <form id="searchForm" action="" method="get" >
+                <div class="select" >
+                    <select class="custom-select" name="condition" style="width: 65px; height: 40px;">
+                        <option value="title">제목</option>
+                        <option value="content">내용</option>
+                    </select>
+                </div>
+                
+                <div class="text" >
+                    <input type="text" class="form-control" name="keyword" style="width: 350px;">
+                </div>
+                <div class="searchBtn">
+                    <button type="submit" class="btn btn-outline-primary-2" >검색</button>
+                </div>
+            </form>
+
+       
+
+            
+            <br><br>
+        </div>
+        <br><br>
+    </div>
+
+    <script>
+
+        window.onload = function() {
+            $(".CFaqTableItem").on("click", function(event) {
+                var clickedItem = $(event.currentTarget);
+
+                if (clickedItem.hasClass("CFaqTableItem--active")) {
+                    clickedItem.removeClass("CFaqTableItem--active");
+
+                    // Change the arrow images
+                    clickedItem.find(".arrow.down").removeClass("hidden");
+                    clickedItem.find(".arrow.up").addClass("hidden");
+
+                    // Reset the margin-top of the footer
+                    $("#footer").css("margin-top", "0");
+                } else {
+                    $(".CFaqTableItem--active").each(function(index, item) {
+                        item.classList.remove("CFaqTableItem--active");
+
+                        // Reset the arrow images
+                        $(item).find(".arrow.down").removeClass("hidden");
+                        $(item).find(".arrow.up").addClass("hidden");
+                    });
+
+                    clickedItem.addClass("CFaqTableItem--active");
+
+                    // Change the arrow images
+                    clickedItem.find(".arrow.down").addClass("hidden");
+                    clickedItem.find(".arrow.up").removeClass("hidden");
+
+                    // Calculate and set the margin-top of the footer
+                    var contentsBoxHeight = clickedItem.find(".CFaqTableItem__contents-box").height();
+                    $("#footer").css("margin-top", contentsBoxHeight + "px");
+                }
+            });
+};
+        
+
+    </script>
+
+
+
+
+
+    <!-- 이쪽에 푸터바 포함할꺼임 -->
+    <jsp:include page=""/>
+</body>
+</html>

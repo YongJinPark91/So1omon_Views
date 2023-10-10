@@ -11,7 +11,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- 부트스트랩에서 제공하고 있는 스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
     <style>
+        .content{
+            width: 1080px;
+            margin: auto;
+        }
         #enrollForm>table {
             width: 100%;
         }
@@ -28,7 +39,7 @@
      <div class="content">
          <br><br>
          <div class="innerOuter">
-             <h2>게시글 작성하기</h2>
+             <h3>공지사항 작성하기</h3>
              <br>
  
              <form id="enrollForm" method="post" action="" enctype="">
@@ -41,10 +52,7 @@
                          <th><label for="writer">작성자</label></th>
                          <td><input type="text" id="writer" class="form-control" value="user01" name="" readonly></td>
                      </tr>
-                     <tr>
-                         <th><label for="upfile">첨부파일</label></th>
-                         <td><input type="file" id="upfile" class="form-control-file border" name=""></td>
-                     </tr>
+
                      <tr>
                          <th colspan="2"><label for="content">내용</label></th>
                      </tr>
@@ -57,8 +65,8 @@
                  <br>
  
                  <div align="center">
-                     <button type="submit" class="btn btn-primary">등록하기</button>
-                     <button type="reset" class="btn btn-danger">취소하기</button>
+                     <button type="submit" class="btn btn-outline-primary-2">등록하기</button>
+                     <button type="reset" class="btn btn-outline-danger">취소하기</button>
                  </div>
              </form>
          </div>
