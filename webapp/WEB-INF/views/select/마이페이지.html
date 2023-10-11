@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 
 <body>
@@ -556,14 +557,14 @@
             </div><!-- End .header-middle -->
         </header><!-- End .header -->
 
-        <main class="main">
+        <main class="main" style="margin: auto;" >
         	<div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
         		<div class="container">
         			<h1 class="page-title">My Account<span>Shop</span></h1>
         		</div><!-- End .container -->
         	</div><!-- End .page-header -->
-            <nav aria-label="breadcrumb" class="breadcrumb-nav mb-3">
-                <div class="container">
+            <nav aria-label="breadcrumb" class="breadcrumb-nav mb-3" style="margin-left: -200px;">
+                <div class="container" >
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Shop</a></li>
@@ -583,7 +584,7 @@
             	<div class="dashboard">
 	                <div class="container">
 	                	<div class="row">
-	                		<aside class="col-md-4 col-lg-3">
+	                		<aside class="col-lg-2" style="margin-left: -100px;">
 	                			<ul class="nav nav-dashboard flex-column mb-3 mb-md-0" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link" id="tab-account-link" data-toggle="tab" href="#tab-account" 
@@ -691,13 +692,14 @@
 								    <div class="tab-pane fade" id="tab-orders" role="tabpanel" aria-labelledby="tab-orders-link">
 								    	<div class="page-content">
                                             <h4>주문내역</h4>
-                                            <hr>
+                                            <hr style="margin-top: 10px;">
                                             <div class="container">
-                                                <table class="table table-wishlist table-mobile">
+                                                <table class="table table-wishlist table-mobile" style="text-align: center;">
                                                     <thead>
                                                         <tr>
                                                             <th>목록 번호</th>
                                                             <th>제품명</th>
+                                                            <th>주문번호</th>
                                                             <th>구매가격</th>
                                                             <th>구매날짜</th>
                                                         </tr>
@@ -707,18 +709,21 @@
                                                         <tr>
                                                             <td >3</td>
                                                             <td class="product-col">
-                                                                <a href="#">
                                                                     <div class="product">
                                                                         <figure class="product-media">
                                                                             <img src="assets/images/products/table/product-1.jpg" alt="Product image">
                                                                         </figure>
                                                                         
                                                                         <h3 class="product-title">
-                                                                            <a href="#">Beige knitted elastic runner shoes</a>
+                                                                            <a href="#">
+                                                                                멋쟁이 신발, red, 230size
+                                                                            </a>
+
                                                                         </h3><!-- End .product-title -->
                                                                     </div><!-- End .product -->
-                                                                </a>
+                                                                
                                                             </td>
+                                                            <td>20230101012031</td>
                                                             <td class="price-col">$84.00</td>
                                                             <td class="stock-col"><span class="in-stock">2023.05.04</span></td>
                                                         </tr>
@@ -732,11 +737,15 @@
                                                                         </figure>
                                                                         
                                                                         <h3 class="product-title">
-                                                                            <a href="#">Beige knitted elastic runner shoes</a>
+                                                                            <a href="#">
+                                                                                데님 멜빵 원피스 <br>
+                                                                                옵션 : 연청, 90size
+                                                                            </a>
                                                                         </h3><!-- End .product-title -->
                                                                     </div><!-- End .product -->
                                                                 </a>
                                                             </td>
+                                                            <td>20230101016543</td>
                                                             <td class="price-col">$95.00</td>
                                                             <td class="stock-col"><span class="in-stock">2023.05.04</span></td>
                                                         </tr>
@@ -755,6 +764,7 @@
                                                                     </div><!-- End .product -->
                                                                 </a>
                                                             </td>
+                                                            <td>2023010123456</td>
                                                             <td class="price-col">$55.00</td>
                                                             <td class="stock-col"><span class="in-stock">2023.05.04</span></td>
                                                         </tr>
@@ -799,18 +809,25 @@
 
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@장바구니@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-
+                                    
                                     <div class="tab-pane fade show active" id="tab-cart" role="tabpanel" aria-labelledby="tab-dashboard-linkd">
                                         <h4>장바구니</h4>
-                                        <hr>
+                                        <hr style="margin-top: 10px;">
                                         <div class="page-content">
                                             <div class="cart">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-lg-9">
-                                                            <table class="table table-cart table-mobile">
+                                                            <table class="table table-cart table-mobile" style="text-align: center;">
                                                                 <thead>
                                                                     <tr>
+                                                                        <th style="padding-bottom: 10px; width: 60px;">
+                                                                            <input type='checkbox'
+                                                                            name='product-cart' 
+                                                                            value='selectall'
+                                                                            onclick='selectAll(this)'/>
+                                                                            <!-- 스크립트 맨 아래 있음-->
+                                                                        </th>
                                                                         <th>상품명</th>
                                                                         <th>가격</th>
                                                                         <th>수량</th>
@@ -821,7 +838,11 @@
 
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td style=" width: 100px;">1</td>
+                                                                        <th style="padding-top: 50px;">
+                                                                            <input type='checkbox'
+                                                                            name='product-cart' 
+                                                                            value=''/> 
+                                                                        </th>
                                                                         <td class="product-col">
                                                                             <div class="product">
                                                                                 <figure class="product-media">
@@ -836,7 +857,7 @@
                                                                             </div><!-- End .product -->
                                                                         </td>
                                                                         <td class="price-col">$84.00</td>
-                                                                        <td class="quantity-col">
+                                                                        <td class="quantity-col" align="center">
                                                                             <div class="cart-product-quantity">
                                                                                 <input type="number" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" name="" required>
                                                                             </div><!-- End .cart-product-quantity -->
@@ -845,7 +866,11 @@
                                                                         <td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td >2</td>
+                                                                        <th style="padding-top: 50px;">
+                                                                            <input type='checkbox'
+                                                                            name='product-cart' 
+                                                                            value=''/> 
+                                                                        </th>
                                                                         <td class="product-col">
                                                                             <div class="product">
                                                                                 <figure class="product-media">
@@ -860,7 +885,7 @@
                                                                             </div><!-- End .product -->
                                                                         </td>
                                                                         <td class="price-col">$76.00</td>
-                                                                        <td class="quantity-col">
+                                                                        <td class="quantity-col" align="center">
                                                                             <div class="cart-product-quantity">
                                                                                 <input type="number" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
                                                                             </div><!-- End .cart-product-quantity -->                                 
@@ -957,10 +982,10 @@
 
 								    <div class="tab-pane fade" id="tab-wishlist" role="tabpanel" aria-labelledby="tab-account-link">
 								    	<h4>찜목록</h4>
-                                        <hr>
+                                        <hr style="margin-top: 10px;">
                                         <div class="page-content">
                                             <div class="container">
-                                                <table class="table table-wishlist table-mobile">
+                                                <table class="table table-wishlist table-mobile" style="text-align: center;">
                                                     <thead>
                                                         <tr>
                                                             <th>찜목록 번호</th>
@@ -973,7 +998,7 @@
                             
                                                     <tbody>
                                                         <tr>
-                                                            <td style=" width: 100px;">3</td>
+                                                            <td>3</td>
                                                             <td class="product-col">
                                                                 <div class="product">
                                                                     <figure class="product-media">
@@ -992,7 +1017,7 @@
                                                             <td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
                                                         </tr>
                                                         <tr>
-                                                            <td >2</td>
+                                                            <td>2</td>
                                                             <td class="product-col">
                                                                 <div class="product">
                                                                     <figure class="product-media">
@@ -1011,7 +1036,7 @@
                                                             <td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
                                                         </tr>
                                                         <tr>
-                                                            <td >1</td>
+                                                            <td>1</td>
                                                             <td class="product-col">
                                                                 <div class="product">
                                                                     <figure class="product-media">
@@ -1040,10 +1065,10 @@
 
                                     <div class="tab-pane fade" id="tab-myposts" role="tabpanel" aria-labelledby="tab-orders-link">
 								    	<h4>나의 게시글</h4>
-                                        <hr>
+                                        <hr style="margin-top: 10px;">
                                         <div class="page-content">
                                             <div class="container">
-                                                <table class="table table-wishlist table-mobile">
+                                                <table class="table table-wishlist table-mobile" style="text-align: center;">
                                                     <thead>
                                                         <tr>
                                                             <th>게시글 번호</th>
@@ -1119,10 +1144,10 @@
 
                                     <div class="tab-pane fade" id="tab-myfavoriteposts" role="tabpanel" aria-labelledby="tab-orders-link">
 								    	<h4>내가 관심있는 게시글</h4>
-                                        <hr>
+                                        <hr style="margin-top: 10px;">
                                         <div class="page-content">
                                             <div class="container">
-                                                <table class="table table-wishlist table-mobile">
+                                                <table class="table table-wishlist table-mobile" style="text-align: center;">
                                                     <thead>
                                                         <tr>
                                                             <th>게시글 번호</th>
@@ -1202,10 +1227,10 @@
 
                                     <div class="tab-pane fade" id="tab-my-reply-review" role="tabpanel" aria-labelledby="tab-account-link">
                                         <h4>나의 리뷰,댓글</h4>
-                                        <hr>
+                                        <hr style="margin-top: 10px;">
                                         <div class="page-content">
                                             <div class="container">
-                                                <table class="table table-wishlist table-mobile">
+                                                <table class="table table-wishlist table-mobile" style="text-align: center;">
                                                     <thead>
                                                         <tr>
                                                             <th>글번호</th>
@@ -1262,10 +1287,10 @@
 
                                     <div class="tab-pane fade" id="tab-myqna" role="tabpanel" aria-labelledby="tab-orders-link">
 								    	<h4>나의 문의내역</h4>
-                                        <hr>
+                                        <hr style="margin-top: 10px;">
                                         <div class="page-content">
                                             <div class="container">
-                                                <table class="table table-wishlist table-mobile">
+                                                <table class="table table-wishlist table-mobile" style="text-align: center;">
                                                     <thead>
                                                         <tr>
                                                             <th>게시글 번호</th>
@@ -1334,7 +1359,7 @@
                                     <div class="tab-pane fade" id="tab-deleteaccount" role="tabpanel" aria-labelledby="tab-account-link">
                                         <form action="#">
                                             <h4>회원탈퇴</h4>
-                                            <hr>
+                                            <hr style="margin-top: 10px;">
                                             <label>비밀번호 입력</label>
                                             <input type="password" class="form-control">
 
@@ -1743,6 +1768,16 @@
     <script src="assets/js/owl.carousel.min.js"></script>
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+        function selectAll(selectAll)  {
+            const checkboxes 
+                = document.getElementsByName('product-cart');
+            
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            })
+        }
+    </script>
 </body>
 
 
