@@ -15,8 +15,10 @@
     <!-- Plugins CSS File -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/plugins/nouislider/nouislider.css">
 
     <style>
 
@@ -44,11 +46,56 @@
     <!-- 이쪽에 메뉴바 포함 할꺼임 -->
     <jsp:include page=""/>
     <br><br>
-    <div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+
+
+    <div class="bg-light pb-5 mb-4">
+        <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+            <div class="container d-flex align-items-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                </ol>
+
+                <nav class="product-pager ml-auto" aria-label="Product">
+                    <a class="product-pager-link product-pager-prev" href="#" aria-label="Previous" tabindex="-1">
+                        <i class="icon-angle-left"></i>
+                        <span>Prev</span>
+                    </a>
+
+                    <a class="product-pager-link product-pager-next" href="#" aria-label="Next" tabindex="-1">
+                        <span>Next</span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                </nav><!-- End .pager-nav -->
+            </div><!-- End .container -->
+        </nav><!-- End .breadcrumb-nav -->
         <div class="container">
-            <h1 class="page-title">자유게시판 상세보기<span>Community</span></h1>
+            <div class="product-gallery-carousel owl-carousel owl-full owl-nav-dark">
+                <figure class="product-gallery-image">
+                    <img src="assets/images/products/single/gallery/1.jpg" data-zoom-image="assets/images/products/single/gallery/1-big.jpg" alt="product image">
+                </figure><!-- End .product-gallery-image -->
+
+                <figure class="product-gallery-image">
+                    <img src="assets/images/products/single/gallery/2.jpg" data-zoom-image="assets/images/products/single/gallery/2-big.jpg" alt="product image">
+                </figure><!-- End .product-gallery-image -->
+
+                <figure class="product-gallery-image">
+                    <img src="assets/images/products/single/gallery/3.jpg" data-zoom-image="assets/images/products/single/gallery/3-big.jpg" alt="product image">
+                </figure><!-- End .product-gallery-image -->
+
+                <figure class="product-gallery-image">
+                    <img src="assets/images/products/single/gallery/4.jpg" data-zoom-image="assets/images/products/single/gallery/4-big.jpg" alt="product image">
+                </figure><!-- End .product-gallery-image -->
+            </div><!-- End .owl-carousel -->
         </div><!-- End .container -->
-    </div><!-- End .page-header -->
+    </div><!-- End .bg-light pb-5 -->
+
+
+
+
+
+    
     <div class="content">
 
         <div class="innerOuter">    
@@ -130,6 +177,21 @@
         </div>
         <br><br>
     </div>
+
+
+    <!-- Plugins JS File -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/superfish.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/bootstrap-input-spinner.js"></script>
+    <script src="assets/js/jquery.elevateZoom.min.js"></script>
+    <script src="assets/js/bootstrap-input-spinner.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
 
     <!-- 이쪽에 푸터바 포함할꺼임 -->
     <jsp:include page=""/>
