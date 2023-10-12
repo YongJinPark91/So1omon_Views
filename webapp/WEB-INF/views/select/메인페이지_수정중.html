@@ -31,7 +31,36 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/skins/skin-demo-2.css">
+<style>
 
+    .image-with-text {
+    display: flex;
+    align-items: center;
+    }
+
+    .image-with-text img {
+    max-width: 100px; /* Adjust the image width as needed */
+    margin-right: 10px; /* Add some spacing between the image and text */
+    }
+
+    .image-with-text p {
+    margin: 0; /* Remove any default paragraph margins */
+    }
+
+    .board_strong{
+        font-size: 12px;
+        padding: 3px 5px;
+        margin-right: 7px;
+        background-color: white;
+        border: 1px solid rgb(190, 190, 190);
+        color: gray;
+    }
+    
+    .board_span{
+        font-weight: 900;
+    }
+
+</style>
 </head>
 
 <body> 
@@ -2350,9 +2379,34 @@
 
             <div class="blog-posts pt-7 pb-7" style="background-color: #fafafa;">
                 <div class="container">
-                    <table border="1" align="center">
+                    <div class="image-with-text">
+                        <img src="https://static.teamblind.com/img/web/ico-best.png" alt="Image Description">
+                        <h3 style="margin-bottom: 0px;">솔로몬 인기글</h3>
+                    </div>
+                    <span style="float: right; margin-top:-25px ;"><a href="">더보기 ></a></span>
+                      
+                    <hr style="margin-top: 0px; margin-bottom: 10px;">
+                    <table border="0" align="center">
                         <tr>
-                            <td>제목</td>
+                            <td width="950">
+                                <strong>[외로움]</strong>외로움을 많이 타는 저 비정상인가요?
+                            </td>
+                            <td width="70">👍 55</td>
+                            <td width="70">💭 36</td>
+                        </tr>
+                        <tr>
+                            <td width="950">
+                                <strong class="board_strong">플스5</strong><span class="board_span">기러기 아빠인데 집으로 오배송 되서 맡아주실분 있으신가요?</span>
+                            </td>
+                            <td width="70">👍 30</td>
+                            <td width="70">💭 9</td>
+                        </tr>
+                        <tr>
+                            <td width="950">
+                                <strong class="board_strong">남편가정교육</strong><span class="board_span">몰래 플스5 한정판 산 남편 어떻게 해야할까요?</span>&nbsp;&nbsp;🖼️
+                            </td>
+                            <td width="70">👍 28</td>
+                            <td width="70">💭 18</td>
                         </tr>
                     </table>
                 </div>
@@ -2360,7 +2414,7 @@
 
             <!-- 인기게시글 종료 -->
  
-            <div class="blog-posts pt-7 pb-7" style="background-color: #fafafa;">
+            <div class="blog-posts pt-7 pb-7" style="background-color: white;">
                 <div class="container">
                    <h2 class="title-lg text-left mb-3 mb-md-4">솔로몬중고👑</h2><!-- End .title-lg text-center -->
 
