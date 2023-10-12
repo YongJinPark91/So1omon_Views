@@ -38,7 +38,12 @@
         .table th{
             padding-top: 30px;
         }
-
+        #buttonA:hover{
+            color: white;
+        }
+        #buttonB:hover{
+            color: white;
+        }
 
     </style>
 </head>
@@ -57,17 +62,7 @@
                     <li class="breadcrumb-item active" aria-current="page">Gallery</li>
                 </ol>
 
-                <nav class="product-pager ml-auto" aria-label="Product">
-                    <a class="product-pager-link product-pager-prev" href="#" aria-label="Previous" tabindex="-1">
-                        <i class="icon-angle-left"></i>
-                        <span>Prev</span>
-                    </a>
 
-                    <a class="product-pager-link product-pager-next" href="#" aria-label="Next" tabindex="-1">
-                        <span>Next</span>
-                        <i class="icon-angle-right"></i>
-                    </a>
-                </nav><!-- End .pager-nav -->
             </div><!-- End .container -->
         </nav><!-- End .breadcrumb-nav -->
         <div class="container">
@@ -115,12 +110,14 @@
                 </tr>
                 <tr>
                     <th>첨부파일</th>
-                    <td colspan="3">
+                    <td>
                     	<!-- 첨부파일이 없는 경우 -->
                     			첨부파일이 없습니다.
                         <!-- 첨부파일이 있는 경우-->
                         <a href="" download="">피자.png</a>
                     </td>
+                    <th>가격</th>
+                    <td>20000원 협의 가능</td>
                 </tr>
                 <tr>
                     <th>내용</th>
@@ -134,8 +131,8 @@
 
             <div align="center">
                 <!-- 수정하기, 삭제하기 버튼은 이글이 본인글일 경우만 보여져야됨 -->
-	                <a class="btn btn-outline-secondary" onclick="">수정하기</a> <!-- 요기에 href="" 를 작성하면 get방식이기 떄문에 노출된다. -->
-	                <a class="btn btn-outline-danger" onclick="">삭제하기</a>
+	                <a class="btn btn-outline-secondary" id="buttonA"  onclick="">수정하기</a> <!-- 요기에 href="" 를 작성하면 get방식이기 떄문에 노출된다. -->
+	                <a class="btn btn-outline-danger" id="buttonB" onclick="">삭제하기</a>
             </div><br><br>
             
     

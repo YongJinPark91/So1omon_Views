@@ -36,6 +36,12 @@
         .table th{
             padding-top: 30px;
         }
+        #buttonA:hover{
+            color: white;
+        }
+        #buttonB:hover{
+            color: white;
+        }
 
     </style>
 </head>
@@ -86,8 +92,8 @@
 
             <div align="center">
                 <!-- 수정하기, 삭제하기 버튼은 이글이 본인글일 경우만 보여져야됨 -->
-	                <a class="btn btn-outline-secondary" onclick="">수정하기</a> <!-- 요기에 href="" 를 작성하면 get방식이기 떄문에 노출된다. -->
-	                <a class="btn btn-outline-danger" onclick="">삭제하기</a>
+	                <a class="btn btn-outline-secondary" id="buttonA" onclick="">수정하기</a> <!-- 요기에 href="" 를 작성하면 get방식이기 떄문에 노출된다. -->
+	                <a class="btn btn-outline-danger" id="buttonB" onclick="">삭제하기</a>
             </div><br><br>
             
             <!-- 댓글 기능은 나중에 ajax 배우고 접목시킬예정! 우선은 화면구현만 해놓음 -->
@@ -103,7 +109,7 @@
                         </th>
                     </tr>
                     <tr>
-                        <td colspan="3">답변  </td> 
+                        <td colspan="3">답변</td> 
                     </tr>
                 </thead>
                 <tbody>
