@@ -65,7 +65,18 @@
                 width: 100%;
             }
         }
+        
+        .table td {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .btn {
+            min-width: 110px;
+        }
+        #searchForm {
+            width: 70%;
 
+        }
 
 
         
@@ -83,11 +94,18 @@
             </div><!-- End .container -->
         </div><!-- End .page-header -->
 
+        
+
 
         <div class="innerOuter" style="padding:5% 10%;">
-	            <!-- 로그인후 상태일 경우만 보여지는 글쓰기 버튼-->
-                <a class="btn btn-outline-secondary btn-sm btn-write" style="float:right;" href="enrollForm.bo">글쓰기</a>
-            <br></br>
+
+            <select id="mySelect" style="float: right;">
+                <option value="option1">5 개</option>
+                <option value="option2">10 개</option>
+                <option value="option3">20 개</option>
+             </select>
+
+            <br>
             <table id="boardList" class="table table-hover" align="center">
                 <thead>
                   <tr>
@@ -96,7 +114,8 @@
                     <th>작성자</th>
                     <th>조회수</th>
                     <th>작성일</th>
-                    <th>첨부파일</th>
+                    <th>좋아요</th>
+                    <th>댓글수</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -107,8 +126,10 @@
 	                        <td>10</td>
 	                        <td>2023-03-29</td>
                             <td>
-                                ●
+                                👍(5)
                             </td>
+	                        <td>📖(10)</td>
+
 	                    </tr>
 
                         <tr>
@@ -118,8 +139,9 @@
 	                        <td>10</td>
 	                        <td>2023-03-26</td>
                             <td>
-                                ●
+                                👍(5)
                             </td>
+                            <td>📖(10)</td>
 	                    </tr>
 
                         <tr>
@@ -129,8 +151,9 @@
 	                        <td>10</td>
 	                        <td>2023-03-24</td>
                             <td>
-                                
+                                👍(0)
                             </td>
+                            <td>📖(10)</td>
 	                    </tr>
 
                         <tr>
@@ -140,8 +163,9 @@
 	                        <td>10</td>
 	                        <td>2023-03-22</td>
                             <td>
-                                
+                                👍(5)
                             </td>
+                            <td>📖(10)</td>
 	                    </tr>
 
                         <tr>
@@ -151,13 +175,16 @@
 	                        <td>100</td>
 	                        <td>2023-03-20</td>
                             <td>
-                                ●
+                                👍(0)
                             </td>
+                            <td>📖(10)</td>
 	                    </tr>
                 </tbody>
             </table>
-            <br>
-		
+  
+            <!-- 로그인후 상태일 경우만 보여지는 글쓰기 버튼-->
+            <a class="btn btn-outline-primary-2 " style="float:right;" href="enrollForm.bo">글쓰기</a>
+        
 			
             <div id="pagingArea">
                 <ul class="pagination">
@@ -192,6 +219,7 @@
                 </div>
             </form>
 
+            
        
 
             

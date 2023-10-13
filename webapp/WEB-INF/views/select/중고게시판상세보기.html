@@ -45,6 +45,10 @@
             color: white;
         }
 
+        .btn {
+            min-width: 110px;
+        }
+
     </style>
 </head>
 <body>
@@ -105,19 +109,12 @@
                 <tr>
                     <th>작성자</th>
                     <td>user01</td>
-                    <th>작성일</th>
+                    <th style="text-align: center;">작성일</th>
                     <td>2023-03-31</td>
                 </tr>
                 <tr>
-                    <th>첨부파일</th>
-                    <td>
-                    	<!-- 첨부파일이 없는 경우 -->
-                    			첨부파일이 없습니다.
-                        <!-- 첨부파일이 있는 경우-->
-                        <a href="" download="">피자.png</a>
-                    </td>
                     <th>가격</th>
-                    <td>20000원 협의 가능</td>
+                    <td colspan="3">20000원 협의 가능</td>
                 </tr>
                 <tr>
                     <th>내용</th>
@@ -146,7 +143,12 @@
                         </th>
                         <th style="vertical-align: middle">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" id="secret" value="" name="">
+                            <label for="secret">비밀댓글</label><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <button class="btn btn-outline-primary-2" >등록하기</button>
+                            
+                              
                         </th>
                     </tr>
                     <tr>
