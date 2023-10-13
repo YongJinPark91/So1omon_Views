@@ -27,7 +27,18 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <style>
+        #ex_file {  /* 파일 필드 숨기기 */
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip:rect(0,0,0,0);
+            border: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -644,19 +655,32 @@
                                         <form action="#">
                                             <h4>나의 정보 수정</h4>
                                             <hr>
-                                            <label>아이디</label>
-                                            <input type="text" class="form-control col-sm-6" name="" readonly>
+                                            <div style="width: 550px; float: left;">
+                                                <label>아이디</label>
+                                                <input type="text" class="form-control" name="" style="width: 100%;" readonly>
 
-                                            <label>이름</label>
-                                            <input type="text" class="form-control col-sm-6" name="" required>
+                                                <label>이름</label>
+                                                <input type="text" class="form-control" name="" style="width: 100%;" required>
 
-                                            <label>닉네임</label>
-                                            <input type="text" class="form-control" name="" required>
-                                            <small class="form-text">so1omon을 이용하실 때 표시되는 이름입니다.</small>
+                                                <label>닉네임</label>
+                                                <input type="text" class="form-control" name="" style="width: 100%;" required>
+                                                <small class="form-text" style="margin-bottom: 10px;">so1omon을 이용하실 때 표시되는 이름입니다.</small>
+
+                                                <label>휴대폰 번호</label>
+                                                <input type="text" class="form-control" name="" required>
+                                            </div>
+                                            <div style="width: 260px; float: left; margin: 32px 0px 60px 0px;" align="center">
+                                                <div style="width: 190px; height: 230px; margin-bottom: 10px; ">
+                                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc5gWQLjGlP_sB-Prk_GyC5iLxHD127Wgir807nbNlHzn2778I8b00xj2OxvExacTG8fA&usqp=CAU" alt="" style="width: 100%; height: 100%;">
+                                                    <!-- 여기 사진은 나중에 파일 불러와서 넣을거임 -->
+                                                </div>
+                                               
+                                                <div class="filebox">
+                                                    <label for="ex_file" class="btn btn-outline-primary-2">사진변경</label>
+                                                    <input type="file" id="ex_file" name=""> 
+                                                </div>
+                                            </div>
                                             
-                                            <label>휴대폰 번호</label>
-                                            <input type="text" class="form-control" name="" required>
-
                                             <label>주소</label>
                                             <input type="text" class="form-control" name="" required>
 
@@ -666,19 +690,25 @@
                                             <label>이메일 주소</label>
                                             <input type="email" class="form-control" name="" required>
 
-                                            <label>현재 비밀번호 (변경하지 않고 그대로 두려면 비워 두세요.)</label>
-                                            <input type="password" class="form-control" name="">
-
-                                            <label>바꿀 비밀번호 (변경하지 않고 그대로 두려면 비워 두세요.)</label>
-                                            <input type="password" class="form-control" name="">
-
-                                            <label>바꿀 비밀번호 확인</label>
-                                            <input type="password" class="form-control mb-2" name="">
-
                                             <button type="submit" class="btn btn-outline-primary-2">
                                                 <span>변경완료</span>
-                                                <i class="icon-long-arrow-right"></i>
                                             </button>
+
+                                            <button type="button" href="#changePwd-modal" data-toggle="modal" class="btn btn-outline-primary-2"  style="margin-left: 10px; height: 33px;">
+                                                비밀번호 변경
+                                            </button>
+
+                                            <!-- 카카오 연동 여부에 따라 둘 중 하나 나올거임 -->
+                                            <div style="float: right;">
+                                                <button type="submit" class="btn btn-outline-primary-2" style="float: right; padding: 5px 5px 5px 5px;">
+                                                    <img style="height: 21px; float: left;" src="https://i0.wp.com/forhappywomen.com/wp-content/uploads/2018/11/%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC-%ED%8F%AC%ED%95%B4%ED%94%BC%EC%9A%B0%EB%A8%BC-%EB%AC%B8%EC%9D%98-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%B9%9C%EA%B5%AC-%EB%B2%84%ED%8A%BC.png?resize=586%2C586&ssl=1" alt="">
+                                                    <span>&nbsp; 카카오 연동 완료</span>
+                                                </button>
+                                                <button type="submit" class="btn btn-outline-primary-2" style="float: right; padding: 5px 5px 5px 5px;">
+                                                    <img style="height: 21px; float: left;" src="https://i0.wp.com/forhappywomen.com/wp-content/uploads/2018/11/%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC-%ED%8F%AC%ED%95%B4%ED%94%BC%EC%9A%B0%EB%A8%BC-%EB%AC%B8%EC%9D%98-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%B9%9C%EA%B5%AC-%EB%B2%84%ED%8A%BC.png?resize=586%2C586&ssl=1" alt="">
+                                                    <span>&nbsp; 카카오 연동</span>
+                                                </button>
+                                            </div>
                                         </form>
                                     </div>
 
@@ -695,9 +725,12 @@
                                                         <tr>
                                                             <th>목록 번호</th>
                                                             <th>제품명</th>
-                                                            <th>주문번호</th>
+                                                            <th>
+                                                                주문번호/<br>송장번호
+                                                            </th>
                                                             <th>구매가격</th>
                                                             <th>구매날짜</th>
+                                                            <th>기타</th>
                                                         </tr>
                                                     </thead>
                             
@@ -719,9 +752,10 @@
                                                                     </div><!-- End .product -->
                                                                 
                                                             </td>
-                                                            <td>20230101012031</td>
+                                                            <td>20230101012031/<br><a href="#" id="deliveryNo" style="border: none; cursor: pointer;">1234512345</a></td>
                                                             <td class="price-col">$84.00</td>
                                                             <td class="stock-col"><span class="in-stock">2023.05.04</span></td>
+                                                            <td>배송중</td>
                                                         </tr>
                                                         <tr>
                                                             <td >2</td>
@@ -741,9 +775,10 @@
                                                                     </div><!-- End .product -->
                                                                 </a>
                                                             </td>
-                                                            <td>20230101016543</td>
+                                                            <td>20230101016543/<br>4567845567</td>
                                                             <td class="price-col">$95.00</td>
                                                             <td class="stock-col"><span class="in-stock">2023.05.04</span></td>
+                                                            <td>배송중</td>
                                                         </tr>
                                                         <tr>
                                                             <td >1</td>
@@ -760,9 +795,10 @@
                                                                     </div><!-- End .product -->
                                                                 </a>
                                                             </td>
-                                                            <td>2023010123456</td>
+                                                            <td>2023010123456/<br>4567356743</td>
                                                             <td class="price-col">$55.00</td>
                                                             <td class="stock-col"><span class="in-stock">2023.05.04</span></td>
+                                                            <td>배송완료</td>
                                                         </tr>
                                                     </tbody>
                                                 </table><!-- End .table table-wishlist -->
@@ -802,6 +838,19 @@
 								    		</div><!-- End .col-lg-6 -->
 								    	</div><!-- End .row -->
 								    </div><!-- .End .tab-pane -->
+                                    <script>
+                                        // div 취득
+                                        const deliveryNo = document.getElementById("deliveryNo");
+                                    
+                                        // button 클릭 이벤트
+                                        document.getElementById("deliveryNo").onclick = () => {
+                                          // div의 내용(textContent)을 복사한다.
+                                          window.navigator.clipboard.writeText(deliveryNo.textContent).then(() => {
+                                            // 복사가 완료되면 호출된다.
+                                            alert("복사완료");
+                                          });
+                                        };
+                                      </script>
 
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@장바구니@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
@@ -892,18 +941,6 @@
                                                                 </tbody>
                                                             </table><!-- End .table table-wishlist -->
 
-                                                            <div class="cart-bottom">
-                                                                <div class="cart-discount">
-                                                                    <form action="#">
-                                                                        <label>현재 포인트 <b>2,200원</b></label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" class="form-control" required placeholder="사용할 포인트">
-                                                                        </div><!-- End .input-group -->
-                                                                    </form>
-                                                                </div><!-- End .cart-discount -->
-
-                                                                <a href="#" class="btn btn-outline-dark-2"><span>UPDATE CART</span><i class="icon-refresh"></i></a>
-                                                            </div><!-- End .cart-bottom -->
                                                         </div><!-- End .col-lg-9 -->
                                                         <aside class="col-lg-3">
                                                             <div class="summary summary-cart">
@@ -924,7 +961,7 @@
                                                                             <td>
                                                                                 <div class="custom-control custom-radio">
                                                                                     <input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
-                                                                                    <label class="custom-control-label" for="free-shipping">무료배송</label>
+                                                                                    <label class="custom-control-label" for="free-shipping">묶음배송:</label>
                                                                                 </div><!-- End .custom-control -->
                                                                             </td>
                                                                             <td>$0.00</td>
@@ -940,21 +977,6 @@
                                                                             <td>$10.00</td>
                                                                         </tr><!-- End .summary-shipping-row -->
 
-                                                                        <tr class="summary-shipping-row">
-                                                                            <td>
-                                                                                <div class="custom-control custom-radio">
-                                                                                    <input type="radio" id="express-shipping" name="shipping" class="custom-control-input">
-                                                                                    <label class="custom-control-label" for="express-shipping">퀵배송:</label>
-                                                                                </div><!-- End .custom-control -->
-                                                                            </td>
-                                                                            <td>$20.00</td>
-                                                                        </tr><!-- End .summary-shipping-row -->
-
-                                                                        <tr class="summary-shipping-estimate">
-                                                                            <td>이거 할건가요???<br> <a href="dashboard.html">주소변경</a></td>
-                                                                            <td>&nbsp;</td>
-                                                                        </tr><!-- End .summary-shipping-estimate -->
-
                                                                         <tr class="summary-total">
                                                                             <td>총 가격:</td>
                                                                             <td>$160.00</td>
@@ -965,7 +987,6 @@
                                                                 <a href="checkout.html" class="btn btn-outline-primary-2 btn-order btn-block">결재하기</a>
                                                             </div><!-- End .summary -->
 
-                                                            <a href="category.html" class="btn btn-outline-dark-2 btn-block mb-3"><span>CONTINUE SHOPPING</span><i class="icon-refresh"></i></a>
                                                         </aside><!-- End .col-lg-3 -->
                                                     </div><!-- End .row -->
                                                 </div><!-- End .container -->
@@ -1387,6 +1408,57 @@
                 </div><!-- End .dashboard -->
             </div><!-- End .page-content -->
         </main><!-- End .main -->
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  비밀번호 변경 모달  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+        <div class="modal fade" id="changePwd-modal" tabindex="-1" role="dialog" aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        
+                        <div class="form-box">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i class="icon-close"></i></span>
+                            </button>
+                            <div class="form-tab">
+                                <ul class="nav nav-pills nav-fill" role="tablist">
+                                    <h3 >비밀번호 변경</h3>
+                                </ul>
+                                <div class="tab-content" id="tab-content-5">
+                                    <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+                                        <form action="#" method="post">
+                                            
+                                            <label>현재 비밀번호</label>
+                                            <input type="password" class="form-control" name="" style="margin-bottom: 0px;">
+                                            <div class="check-pwd" style="font-size: 10px; color: red;">틀린 비밀번호입니다.</div>
+
+                                            <label>새 비밀번호</label>
+                                            <input type="password" class="form-control" name="" style="margin-bottom: 0px;">
+                                            <div class="check-pwd" style="font-size: 10px; color: red;">비밀번호 형식이 맞지 않습니다.</div>
+
+                                            <label>비밀번호 확인</label>
+                                            <input type="password" class="form-control" name="" style="margin-bottom: 0px;">
+                                            <div class="check-pwd" style="font-size: 10px; color: blue;">비밀번호가 일치합니다.</div><br>
+
+                                            <div class="form-footer">
+                                                <button type="submit" class="btn btn-outline-primary-2">
+                                                    <span>변경하기</span>
+                                                    <i class="icon-long-arrow-right"></i>
+                                                </button>
+                                            </div><!-- End .form-footer -->
+                                        </form>
+                                        
+                                    </div><!-- .End .tab-pane -->
+                                    
+                                </div><!-- End .tab-content -->
+                            </div><!-- End .form-tab -->
+                        </div><!-- End .form-box -->
+                    </div><!-- End .modal-body -->
+                </div><!-- End .modal-content -->
+            </div><!-- End .modal-dialog -->
+        </div><!-- End .modal -->
 
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  마이페이지 탭 div 전부 끝  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->

@@ -27,6 +27,11 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        #tright{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -589,7 +594,7 @@
                                     <hr>
 		                				<div class="row">
 		                					<div class="col-sm-6">
-		                						<label>이름 *</label>
+		                						<label>받는 사람 *</label>
 		                						<input type="text" class="form-control" required>
 		                					</div><!-- End .col-sm-6 -->
 		                				</div><!-- End .row -->
@@ -627,39 +632,39 @@
 		                			<div class="summary">
 		                				<h3 class="summary-title">주문내용</h3><!-- End .summary-title -->
 
-		                				<table class="table table-summary">
+		                				<table class="table table-summary" style="width: 100%;">
 		                					<thead>
 		                						<tr>
 		                							<th>제품</th>
-		                							<th>총금액</th>
+		                							<th id="tright">총금액</th>
 		                						</tr>
 		                					</thead>
 
 		                					<tbody>
 		                						<tr>
 		                							<td><a href="#">Beige knitted elastic runner shoes</a></td>
-		                							<td>84,000원</td>
+		                							<td id="tright">84,000원</td>
 		                						</tr>
 
 		                						<tr>
 		                							<td><a href="#">Blue utility pinafore denimdress</a></td>
-		                							<td>76,000원</td>
+		                							<td id="tright">76,000원</td>
 		                						</tr>
+                                                <tr>
+                                                    <td>배송 :</td>
+                                                    <td id="tright">무료배송</td>
+                                                </tr>
                                                 <tr class="summary-subtotal">
-		                							<td>포인트 사용 :</td>
-		                							<td>2,000원</td>
+                                                    <td>소계 :</td>
+                                                    <td id="tright">158,000원</td>
+                                                </tr><!-- End .summary-subtotal -->
+                                                <tr>
+		                							<td>포인트 사용 : <input type="text" name="" style="width:70px; background-color: rgb(249, 249, 249); border: 1px solid lightgray;"><p style="font-size: 10px;margin-top: 5px;">(현재포인트 : 2200원)</p></td>
+		                							<td id="tright"> 2,000원</td>
 		                						</tr><!-- End .summary-subtotal -->
-		                						<tr class="summary-subtotal">
-		                							<td>소계 :</td>
-		                							<td>158,000원</td>
-		                						</tr><!-- End .summary-subtotal -->
-		                						<tr>
-		                							<td>배송 :</td>
-		                							<td>무료배송</td>
-		                						</tr>
 		                						<tr class="summary-total">
 		                							<td>총 금액 :</td>
-		                							<td>158,000원</td>
+		                							<td id="tright">158,000원</td>
 		                						</tr><!-- End .summary-total -->
 		                					</tbody>
 		                				</table><!-- End .table table-summary -->
