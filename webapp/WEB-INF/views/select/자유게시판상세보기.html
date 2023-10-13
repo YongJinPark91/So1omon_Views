@@ -48,6 +48,18 @@
             min-width: 110px;
         }
 
+        img {
+        cursor: pointer;
+        }
+
+        #like-icon1 {
+        display: inline;
+        }
+
+        #like-icon2 {
+        display: none;
+        }
+
 
     </style>
 </head>
@@ -69,7 +81,12 @@
             <table id="contentArea" align="center" class="table">
                 <tr>
                     <th width="100">제목</th>
-                    <td colspan="3">게시글 제목입니다</td>
+                    <td colspan="2">게시글 제목입니다</td>
+                    <td>
+                        <img src="https://cdn-icons-png.flaticon.com/128/20/20664.png" style="width: 30px;" alt="좋아요1" id="like-icon1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/7606/7606143.png" style="width: 30px;" alt="좋아요2" id="like-icon2" style="display: none;">
+                        <span>(5개)</span>
+                    </td>
                 </tr>
                 <tr>
                     <th>작성자</th>
@@ -77,15 +94,7 @@
                     <th>작성일</th>
                     <td>2023-03-31</td>
                 </tr>
-                <tr>
-                    <th>첨부파일</th>
-                    <td colspan="3">
-                    	<!-- 첨부파일이 없는 경우 -->
-                    			첨부파일이 없습니다.
-                        <!-- 첨부파일이 있는 경우-->
-                        <a href="" download="">피자.png</a>
-                    </td>
-                </tr>
+                
                 <tr>
                     <th>내용</th>
                     <td colspan="3"></td>
@@ -141,6 +150,25 @@
         </div>
         <br><br>
     </div>
+
+    <script>
+        var likeIcon1 = document.getElementById("like-icon1");
+        var likeIcon2 = document.getElementById("like-icon2");
+
+        likeIcon1.addEventListener("click", function() {
+            likeIcon1.style.display = "none";
+            likeIcon2.style.display = "inline";
+        });
+
+        likeIcon2.addEventListener("click", function() {
+            likeIcon1.style.display = "inline";
+            likeIcon2.style.display = "none";
+        });
+
+
+
+    </script>
+
 
     <!-- 이쪽에 푸터바 포함할꺼임 -->
     <jsp:include page=""/>
