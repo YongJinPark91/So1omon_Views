@@ -31,6 +31,12 @@
         #tright{
             text-align: center;
         }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -603,27 +609,21 @@
 	            						<input type="text" class="form-control" placeholder="도로명, 지번주소" required>
 	            						<input type="text" class="form-control" placeholder="상세주소" required> -->
                                         
-                                        <label>주소 *</label><br>
-                                        <input type="text" id="sample6_postcode" placeholder="우편번호" readonly>
-                                        <input type="button"  onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-                                        <input type="text" class="form-control" id="sample6_address" placeholder="주소" name="" style="margin-bottom: 0px; margin-top: 15px; padding-bottom: 0px;" readonly><br>
-                                        <input type="text" class="form-control" id="sample6_detailAddress" placeholder="상세주소" name="">
+                                        <label>주소찾기 *</label><br>
+                                        <input type="text" id="sample6_postcode" class="form-control col-sm-6" placeholder="우편번호" readonly >
+                                        <input type="button"  onclick="sample6_execDaumPostcode();" value="우편번호 찾기"><br><br>
+
+                                        <label>주소 *</label>
+                                        <input type="text" class="form-control col-sm-6" id="sample6_address" placeholder="주소" name="" style="margin-bottom: 0px; padding-bottom: 0px;" readonly><br>
                                         
-
-		                				<div class="row">
-		                					<div class="col-sm-6">
-		                						<label>우편번호 *</label>
-		                						<input type="text" class="form-control" required>
-		                					</div><!-- End .col-sm-6 -->
-
-		                					<div class="col-sm-6">
-		                						<label>핸드폰 *</label>
-		                						<input type="tel" class="form-control" required>
-		                					</div><!-- End .col-sm-6 -->
-		                				</div><!-- End .row -->
+                                        <label>상세주소 *</label>
+                                        <input type="text" class="form-control col-sm-6" id="sample6_detailAddress" placeholder="상세주소" name="">
+                                        
+		                				<label>핸드폰 *</label>
+		                				<input type="text" class="form-control col-sm-6" required>
 
 	                					<label>이메일 주소 *</label>
-	        							<input type="email" class="form-control" required>
+	        							<input type="email" class="form-control col-sm-6" required>
 
 	                					<label>주문 메모 (선택사항)</label>
 	        							<textarea class="form-control" cols="30" rows="4" placeholder="주문/배송에 대한 참고사항"></textarea>
@@ -642,12 +642,15 @@
 
 		                					<tbody>
 		                						<tr>
-		                							<td><a href="#">Beige knitted elastic runner shoes</a></td>
-		                							<td id="tright">84,000원</td>
+		                							<td>반짝이 신발, 빨간색, 2개</td>
+		                							<td id="tright">
+                                                        <p style="font-size: 12px;">84,000*2</p>
+                                                        168,000원
+                                                    </td>
 		                						</tr>
 
 		                						<tr>
-		                							<td><a href="#">Blue utility pinafore denimdress</a></td>
+		                							<td>Blue utility pinafore denimdress</td>
 		                							<td id="tright">76,000원</td>
 		                						</tr>
                                                 <tr>
@@ -656,94 +659,19 @@
                                                 </tr>
                                                 <tr class="summary-subtotal">
                                                     <td>소계 :</td>
-                                                    <td id="tright">158,000원</td>
+                                                    <td id="tright">244,000원</td>
                                                 </tr><!-- End .summary-subtotal -->
                                                 <tr>
-		                							<td>포인트 사용 : <input type="text" name="" style="width:70px; background-color: rgb(249, 249, 249); border: 1px solid lightgray;"><p style="font-size: 10px;margin-top: 5px;">(현재포인트 : 2200원)</p></td>
+                                                    <!-- input 박스 max값에 보유 포인트 넣어야함 -->
+		                							<td>포인트 사용 : <input type="number" name="" min="100" max="500" style="width:90px; background-color: rgb(249, 249, 249); border: 1px solid lightgray;" placeholder="포인트 입력"><p style="font-size: 10px;margin-top: 5px;">(현재포인트 : 2200원)</p></td>
 		                							<td id="tright"> 2,000원</td>
 		                						</tr><!-- End .summary-subtotal -->
 		                						<tr class="summary-total">
 		                							<td>총 금액 :</td>
-		                							<td id="tright">158,000원</td>
+		                							<td id="tright">244,000원</td>
 		                						</tr><!-- End .summary-total -->
 		                					</tbody>
 		                				</table><!-- End .table table-summary -->
-
-		                				<div class="accordion-summary" id="accordion-payment">
-										    <div class="card">
-										        <div class="card-header" id="heading-1">
-										            <h2 class="card-title">
-										                <a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
-										                    계좌이체
-										                </a>
-										            </h2>
-										        </div><!-- End .card-header -->
-										        <div id="collapse-1" class="collapse show" aria-labelledby="heading-1" data-parent="#accordion-payment">
-										            <div class="card-body">
-										                Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
-										            </div><!-- End .card-body -->
-										        </div><!-- End .collapse -->
-										    </div><!-- End .card -->
-
-										    <div class="card">
-										        <div class="card-header" id="heading-2">
-										            <h2 class="card-title">
-										                <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
-										                    Check payments
-										                </a>
-										            </h2>
-										        </div><!-- End .card-header -->
-										        <div id="collapse-2" class="collapse" aria-labelledby="heading-2" data-parent="#accordion-payment">
-										            <div class="card-body">
-										                Ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. 
-										            </div><!-- End .card-body -->
-										        </div><!-- End .collapse -->
-										    </div><!-- End .card -->
-
-										    <div class="card">
-										        <div class="card-header" id="heading-3">
-										            <h2 class="card-title">
-										                <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
-										                    Cash on delivery
-										                </a>
-										            </h2>
-										        </div><!-- End .card-header -->
-										        <div id="collapse-3" class="collapse" aria-labelledby="heading-3" data-parent="#accordion-payment">
-										            <div class="card-body">Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
-										            </div><!-- End .card-body -->
-										        </div><!-- End .collapse -->
-										    </div><!-- End .card -->
-
-										    <div class="card">
-										        <div class="card-header" id="heading-4">
-										            <h2 class="card-title">
-										                <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
-										                    PayPal <small class="float-right paypal-link">What is PayPal?</small>
-										                </a>
-										            </h2>
-										        </div><!-- End .card-header -->
-										        <div id="collapse-4" class="collapse" aria-labelledby="heading-4" data-parent="#accordion-payment">
-										            <div class="card-body">
-										                Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.
-										            </div><!-- End .card-body -->
-										        </div><!-- End .collapse -->
-										    </div><!-- End .card -->
-
-										    <div class="card">
-										        <div class="card-header" id="heading-5">
-										            <h2 class="card-title">
-										                <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
-										                    Credit Card (Stripe)
-										                    <img src="assets/images/payments-summary.png" alt="payments cards">
-										                </a>
-										            </h2>
-										        </div><!-- End .card-header -->
-										        <div id="collapse-5" class="collapse" aria-labelledby="heading-5" data-parent="#accordion-payment">
-										            <div class="card-body"> Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Lorem ipsum dolor sit ame.
-										            </div><!-- End .card-body -->
-										        </div><!-- End .collapse -->
-										    </div><!-- End .card -->
-										</div><!-- End .accordion -->
 
 		                				<button type="submit" class="btn btn-outline-primary-2 btn-order btn-block">
 		                					<span class="btn-text">주문하기</span>
