@@ -18,6 +18,16 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- TUI 에디터 CSS CDN -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+
+
     <style>
         .content{
             width: 1000px;
@@ -31,11 +41,14 @@
             margin: 5px;
         }
 
-        #buttonA:hover{
-            color: white;
-        }
+
         #buttonB:hover{
             color: white;
+            background-color: lightcoral;
+            border: 1px solid  lightcoral;
+        }
+        .btn {
+            min-width: 110px;
         }
     </style>
 </head>
@@ -71,19 +84,36 @@
                         <th colspan="2"><label for="content">내용</label></th>
                     </tr>
                     <tr>
-                        <th colspan="2"><textarea class="form-control" required name="" id="content" rows="10" style="resize:none;">기존글의내용</textarea></th>
+                        <th colspan="2">
+                            <!-- 에디터를 적용할 요소 (컨테이너) -->
+                            <div id="content">
+
+                            </div>
+                        </th>
                     </tr>
                 </table>
                 <br>
 
                 <div align="center">
-                    <button type="submit" class="btn btn-outline-warning" id="buttonA">수정하기</button>
+                    <button type="submit" class="btn btn-outline-primary-2" id="buttonA">수정하기</button>
                     <button type="button" class="btn btn-outline-danger" id="buttonB">이전으로</button>
                 </div>
             </form>
         </div>
         <br><br>
     </div>
+
+    <!-- TUI 에디터 JS CDN -->
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <script>
+        const editor = new toastui.Editor({
+            el: document.querySelector('#content'), // 에디터를 적용할 요소 (컨테이너)
+            height: '500px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
+            initialEditType: 'WYSIWYG',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
+            initialValue: '내용을 입력해 주세요ss.',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
+            previewStyle: 'vertical'                // 마크다운 프리뷰 스타일 (tab || vertical)
+        });
+    </script>
 
     <!-- 이쪽에 푸터바 포함할꺼임 -->
     <jsp:include page=""/>
