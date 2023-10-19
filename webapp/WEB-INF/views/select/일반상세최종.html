@@ -846,30 +846,47 @@
                                             </div><!-- End .col-auto -->
                                             
                                         </div><!-- End .row -->
-                                        <div id="review-area">
-                                            <form action="#" method="post">
-                                            </form>
-                                            <div id="rating">
-                                                <p>만족도</p>
-                                                <select name="rating">
-                                                    <option value="1">⭐</option>
-                                                    <option value="2">⭐⭐</option>
-                                                    <option value="3">⭐⭐⭐</option>
-                                                    <option value="4">⭐⭐⭐⭐</option>
-                                                    <option value="5">⭐⭐⭐⭐⭐</option>
-                                                </select>
-                                                <input type="file">
-                                            </div>
 
-                                            <div id="cmt_btn" style="display: flex;">
-                                                <textarea name="review-content" style="resize: none;  width: 100%; height: 50px;" placeholder="구매 회원만 작성 가능합니다."></textarea>
-                                                <div class="col-6 col-lg-4 col-xl-2">
-                                                    <div class="btn-wrap">
-                                                        <a href="#" class="btn btn-outline-primary btn-rounded" style="margin-left: 10px; margin-top: 5px;">등록</a>
-                                                    </div><!-- End .btn-wrap -->
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="heading-1">
+                                                <h2 class="card-title">
+                                                    <a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                                        리뷰 쓰기
+                                                    </a>
+                                                </h2>
+                                            </div><!-- End .card-header -->
+                                            <div id="collapse-1" class="collapse show" aria-labelledby="heading-1" data-parent="#accordion-1">
+                                                <div class="card-body">
+                                                    <div id="review-area">
+                                                        <form action="#" method="post">
+                                                        </form>
+                                                        <div id="rating">
+                                                            <p style="float: left;">만족도</p>
+                                                            <select name="rating" style="float: left;">
+                                                                <option value="1">⭐</option>
+                                                                <option value="2">⭐⭐</option>
+                                                                <option value="3">⭐⭐⭐</option>
+                                                                <option value="4">⭐⭐⭐⭐</option>
+                                                                <option value="5" selected>⭐⭐⭐⭐⭐</option>
+                                                            </select>
+                                                            <input type="file">
+                                                        </div>
+            
+                                                        <div id="cmt_btn" style="display: flex;">
+                                                            <textarea name="review-content" style="resize: none;  width: 100%; height: 50px;" placeholder="구매 회원만 작성 가능합니다."></textarea>
+                                                            <div class="col-6 col-lg-4 col-xl-2">
+                                                                <div class="btn-wrap">
+                                                                    <button type="submit" class="btn btn-outline-primary btn-rounded" style="margin-left: 10px; margin-top: 5px;">등록</ㅠ>
+                                                                </div><!-- End .btn-wrap -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- End .card-body -->
+                                            </div><!-- End .collapse -->
+                                        </div><!-- End .card -->
+
+
+                                        
                                 </div><!-- End .reviews -->
                             </div><!-- .End .tab-pane -->
                         </div><!-- End .tab-content -->
