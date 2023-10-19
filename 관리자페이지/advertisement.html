@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>관리자페이지-사용자관리</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <!-- jQuery 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <style>
+    #bannerImg{
+      display: block;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    #banner-list{
+      vertical-align: middle;
+      width: 90%;
+      margin: auto;
+      margin-bottom: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/So1omon (3).gif" alt="">
+        <span class="d-none d-lg-block">관리자페이지</span>
+      </a>
+      
+    </div><!-- End Logo --> 
+
+  </header><!-- End Header -->
+
+
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="index.html">
+        <!-- <i class="bi bi-grid"></i> -->
+        <span>홈</span>
+      </a>
+    </li><!-- End Dashboard Nav -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="memberList.html">
+        <i class="bi bi-people"></i>
+        <span>사용자 관리</span>
+      </a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="users-profile.html">
+        <i class="bi bi-cart"></i>
+        <span>주문 관리</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="question.html">
+        <i class="bi bi-layout-text-window-reverse"></i>
+        <span>문의 관리</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-grid"></i><span>상품 관리</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="forms-elements.html">
+            <i class="bi bi-circle"></i><span>상품 등록</span>
+          </a>
+        </li>
+        <li>
+          <a href="forms-layouts.html">
+            <i class="bi bi-circle"></i><span>상품 조회</span>
+          </a>
+        </li>
+        <li>
+          <a href="forms-editors.html">
+            <i class="bi bi-circle"></i><span>공동구매 상품 등록</span>
+          </a>
+        </li>
+      </ul>
+    </li><!-- End Forms Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-layout-text-window-reverse"></i><span>게시글 관리</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="tables-general.html">
+            <i class="bi bi-circle"></i><span>자유게시판</span>
+          </a>
+        </li>
+        <li>
+          <a href="tables-data.html">
+            <i class="bi bi-circle"></i><span>거래게시판</span>
+          </a>
+        </li>
+      </ul>
+    </li><!-- End Tables Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-journal-text"></i><span>웹사이트 관리</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="charts-nav" class="nav-content" data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="charts-chartjs.html" class="active">
+            <i class="bi bi-circle"></i><span>배너</span>
+          </a>
+        </li>
+        <li>
+          <a href="charts-apexcharts.html">
+            <i class="bi bi-circle"></i><span>팝업창</span>
+          </a>
+        </li>
+        <li>
+          <a href="charts-echarts.html">
+            <i class="bi bi-circle"></i><span>접속통계</span>
+          </a>
+        </li>
+      </ul>
+    </li><!-- End Charts Nav -->
+    
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="pages-blank.html">
+        <i class="bi bi-three-dots"></i>
+        <span>신고 관리</span>
+      </a>
+    </li>
+    
+</aside><!-- End Sidebar-->
+
+
+<main id="main" class="main">
+  
+  <div class="pagetitle">
+    <h1>배너 관리</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">홈</a></li>
+        <li class="breadcrumb-item">웹사이트 관리</li>
+        <li class="breadcrumb-item">배너 관리</li>
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body" style="padding:20px;">
+                <!-- <img src="assets/img/banner.PNG" height="250" id="bannerImg"> -->
+                <table class="table" id="banner-list">
+                  <thead>
+                    <tr align="center">
+                      <th width="150">분류</th>
+                      <th>이미지</th>
+                      <th>제목</th>
+                      <th>링크</th>
+                      <th>관리</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr align="center">
+                      <td rowspan="3">메인배너</td>
+                      <td><img width="170" height="100"></td>
+                      <td>1인가구 국가사업홍보</td>
+                      <td>http://www.~~~~</td>
+                      <td>
+                        <button class="btn btn-outline-primary btn-sm" onclick="bannerEdit();">수정</button>
+                      </td>
+                    </tr>
+                    <tr align="center">
+                      <td><img width="170" height="100"></td>
+                      <td>1인가구 국가사업홍보</td>
+                      <td>http://www.~~~~</td>
+                      <td>
+                        <button class="btn btn-outline-primary btn-sm">수정</button>
+                      </td>
+                    </tr>
+                    <tr align="center">
+                      <td><img width="170" height="100"></td>
+                      <td>1인가구 국가사업홍보</td>
+                      <td>http://www.~~~~</td>
+                      <td>
+                        <button class="btn btn-outline-primary btn-sm">수정</button>
+                      </td>
+                    </tr>
+                    <tr align="center">
+                      <td rowspan="3">사이드 배너1</td>
+                      <td><img width="170" height="100"></td>
+                      <td>1인가구 국가사업홍보</td>
+                      <td>http://www.~~~~</td>
+                      <td>
+                        <button class="btn btn-outline-primary btn-sm">수정</button>
+                      </td>
+                    </tr>
+                    <tr align="center">
+                      <td><img width="170" height="100"></td>
+                      <td>1인가구 국가사업홍보</td>
+                      <td>http://www.~~~~</td>
+                      <td>
+                        <button class="btn btn-outline-primary btn-sm">수정</button>
+                      </td>
+                    </tr>
+                    <tr align="center">
+                      <td><img width="170" height="100"></td>
+                      <td>1인가구 국가사업홍보</td>
+                      <td>http://www.~~~~</td>
+                      <td>
+                        <button class="btn btn-outline-primary btn-sm">수정</button>
+                      </td>
+                    </tr>
+                    <tr align="center">
+                      <td rowspan="3">사이드 배너2</td>
+                      <td><img width="170" height="100"></td>
+                      <td>1인가구 국가사업홍보</td>
+                      <td>http://www.~~~~</td>
+                      <td>
+                        <button class="btn btn-outline-primary btn-sm">수정</button>
+                      </td>
+                    </tr>
+                    <tr align="center">
+                      <td><img width="170" height="100"></td>
+                      <td>1인가구 국가사업홍보</td>
+                      <td>http://www.~~~~</td>
+                      <td>
+                        <button class="btn btn-outline-primary btn-sm">수정</button>
+                      </td>
+                    </tr>
+                    <tr align="center">
+                      <td><img width="170" height="100"></td>
+                      <td>1인가구 국가사업홍보</td>
+                      <td>http://www.~~~~</td>
+                      <td>
+                        <button class="btn btn-outline-primary btn-sm">수정</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <form action="" id="form">
+                  <input type="hidden" value="동적으로 회원번호 받기">
+                </form>
+
+                <script>
+                  function bannerEdit(){
+                    window.open("banner-edit.html?", "_blank","width=510,height=400,left=500,top=200,scrollbars=none");
+                  }
+                </script>
+                
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
