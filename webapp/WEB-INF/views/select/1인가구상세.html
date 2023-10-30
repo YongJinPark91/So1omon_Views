@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 부트스트랩에서 제공하고 있는 스타일 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 부트스트랩에서 제공하고 있는 스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+
+        .content{
+            width: 1000px;
+            margin: auto; 
+            
+        }
+
+        table * {
+            margin: 5px;
+        }
+        
+        table {
+            width: 100%;
+        }
+        .table th{
+            padding-top: 30px;
+        }
+        #buttonA:hover{
+            color: white;
+        }
+        #buttonB:hover{
+            color: white;
+            background-color: lightcoral;
+            border: 1px solid  lightcoral;
+        }
+        
+
+                
+        .btn {
+            min-width: 110px;
+        }
+
+        img {
+        cursor: pointer;
+        }
+
+        #like-icon1 {
+        display: inline;
+        }
+
+        #like-icon2 {
+        display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 이쪽에 메뉴바 포함 할꺼임 -->
+    <jsp:include page=""/>
+    <br><br>
+    <div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+        <div class="container">
+            <h1 class="page-title">1인가구 게시판 상세보기<span>Community</span></h1>
+        </div><!-- End .container -->
+    </div><!-- End .page-header -->
+    <div class="content">
+
+        <div class="innerOuter">    
+            <br>
+            <a class="btn btn-outline-primary-2" style="float:right" href="">목록으로</a>
+            <br><br>
+            <table id="contentArea" align="center" class="table">
+                <tr>
+                    <th width="100">제목</th>
+                    <td colspan="3">제목값</td>
+                </tr>
+                <tr>
+                    <th style="width: 150px;">시작접수기간</th>
+                    <td style="width: 150px;">시작접수기간값</td>
+                    <th style="width: 150px;">종료접수기간</th>
+                    <td style="width: 150px;">종료접수기간값</td>
+                </tr>
+                
+                <tr>
+                    <th>내용</th>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><p style="height:150px">내용값</p></td>
+                </tr>
+            </table>
+            <br>
+
+            <br><br> 
+            
+    
+
+    </div>
+
+
+
+
+    <!-- 이쪽에 푸터바 포함할꺼임 -->
+    <jsp:include page=""/>
+</body>
+</html>
